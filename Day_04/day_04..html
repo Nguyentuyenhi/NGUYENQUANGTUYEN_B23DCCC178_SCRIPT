@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng nhập</title>
+    <style>
+        body {  background-image:url('cac-nhan-vat-trong-genshin-impact-4.png'); background-size:cover;height:100%;
+            font-family: Arial, sans-serif;
+        }
+        .c {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 30px;
+            border: 1px solid #169d33;
+            border-radius: 40px; 
+            
+            background-image: url('HD-wallpaper-xiao-anemo-anime-genshin-genshin-adeptus-genshin-impact-genshin-impact-xiao-genshin-xiao-xiao-genshin-xiao-genshin-impact.jpg') ;  
+        }
+        .c h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            color:#169d33;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            height: 34px;
+        }
+        .cc {
+            display:inline-block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 30px;
+            background-image: url('anh-genshin-impact-10.jpg');
+            color: #eef5f5;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .cc:hover
+        {
+            background-image: url('anh-genshin-impact-10.jpg');
+        }
+    </style>
+</head>
+<body>
+<div class="c">
+    <h2>Đăng nhập</h2>      
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="confirmpassword">Confirm Password:</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" required>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label>Hobbies:</label><br>
+            <input type="checkbox" id="hobby1" name="hobbies[]" value="reading">
+            <label for="hobby1">Reading</label><br>
+            <input type="checkbox" id="hobby2" name="hobbies[]" value="traveling">
+            <label for="hobby2">Traveling</label><br>
+            <input type="checkbox" id="hobby3" name="hobbies[]" value="sports">
+            <label for="hobby3">Sports</label><br>
+            <input type="checkbox" id="hobby4" name="hobbies[]" value="music">
+            <label for="hobby4">Music</label><br>
+            <form action="/action_page.php">
+                <label for="hi">Source of income:</label>
+                <select id="cars" name="cars">
+                  <option value="volvo">Employer</option>
+                </select>
+            <form action="/action_page.php" method="get">
+                <label for="ic">Income:</label>
+                    <input type="range" id="ic" name="ic" min="0" max="50">20k <br><br>
+                    <p>Blo</p>
+                    <textarea name="message" rows="10" cols="60"></textarea>
+                    <br><br>
+        <button type="submit" class="cc">Đăng nhập</button>
+        
+    </form>
+</div>
+
+</body>
+</html>
+
