@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide Ảnh</title>
+<style>
+    #slideshow-container {
+        position: relative;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    #slideshow-images {
+        display: flex;
+    
+    }
+
+    .slide {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    #prev, #next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+    }
+
+    #prev {
+        left: 0;
+    }
+
+    #next {
+        right: 0;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div id="slideshow-container">
+    <div id="slideshow-images">
+        <img class="slide" src="th (1).jpg" alt="Image 1">
+        <img class="slide" src="th (2).jpg" alt="Image 2">
+        <img class="slide" src="th.jpg" alt="Image 3">
+        <img class="slide" src="th (4).jpg" alt="Image 4">
+        <img class="slide" src="th (3).jpg" alt="Image 5">
+    </div>
+    <div id="prev">&#8592;</div>
+    <div id="next">&#10140;</div>
+</div>
+
+<script>
+$(document).ready(function(){
+    var currentIndex = 0;
+    var slides = $(".slide");
+    var totalSlides = slides.length;
+    var slideWidth = slides.eq(0).width();
+    function slideTo(index) {
+        if (index >= totalSlides) {
+            index = 0;
+        } else if (index < 0) {
+            index = totalSlides - 1;
+        }
+        $("#slideshow-images").css("transform", "translateX(" + (-index * slideWidth) + ")");
+        currentIndex = index;
+    }
+    function nextSlide() {
+        slideTo(currentIndex + 1);
+    }
+    function prevSlide() {
+        slideTo(currentIndex - 1);
+    }
+    $("#next").click(nextSlide);
+    $("#prev").click(prevSlide);
+    setInterval(nextSlide, 2000);
+
+    
+});
+</script>
+
+</body>
+</html>

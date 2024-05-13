@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thêm Item Mới</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<input type="text" id="new_item_input" placeholder="Nhập item mới...">
+<button id="add_button">Add</button>
+<h1>list item</h1>
+<ul id="item_list">
+
+</ul>
+<script>
+$(document).ready(function(){
+    $("#add_button").click(function(){
+        var newItemValue = $("#new_item_input").val().trim();
+        if(newItemValue !== "") {
+            var newItem = "<li>" + newItemValue + "</li>"; 
+            $("#item_list").append(newItem); 
+            $("#new_item_input").val(""); 
+        }
+    });
+});
+</script>
+
+</body>
+</html>
