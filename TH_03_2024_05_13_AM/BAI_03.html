@@ -67,7 +67,8 @@ $(document).ready(function(){
         } else if (index < 0) {
             index = totalSlides - 1;
         }
-        $("#slideshow-images").css("transform", "translateX(" + (-index * slideWidth) + ")");
+        $("#slideshow-images").css("transform", "translateX(" + (-index * slideWidth) + "px)");
+        
         currentIndex = index;
     }
     function nextSlide() {
